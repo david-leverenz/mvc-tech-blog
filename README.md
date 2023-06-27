@@ -6,7 +6,7 @@ This is a CMS-style blog site.<br>
 
 
 ## Links
-**GitHub:** <br>
+**GitHub:** https://github.com/david-leverenz/mvc-tech-blog<br>
 **Walkthrough Video:** N/A<br>
 **Live Link:** N/A <br>
 **Screen Shot:** <br>
