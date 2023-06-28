@@ -1,0 +1,18 @@
+<h1>All Blogs</h1>
+<p>
+    {{#each showBlogs}}
+<p>
+<h1>{{this.post_title}}</h1>
+<p>
+    {{this.post_contents}}
+<p>
+    Created on:{{this.createdAt}} by: {{this.User.name}}
+</p>
+<p>
+    Comment:{{this.Comments.comment}}-{{this.Comments.user_id}}
+</p>
+</p>
+
+</p>
+{{/each}}
+</p>
