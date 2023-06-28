@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt'); // only if you need to encrypt something
 const sequelize = require('../config/connection');
 
 class User extends Model {
-  checkPassword(loginPw) { 
+  checkPassword(loginPw) {
     // instance method, class definition which creates an object, it's a synchronus function, taking user password and the password from the db and comaring it.  Creating the original password, hash it and then compare to the has password.  You can do this in the routes as well, but it is better to do it here.  Question and answer to recover password are usually also hashed.  So you will reuse this function quite a bit.
     return bcrypt.compareSync(loginPw, this.password);
   }
@@ -20,7 +20,7 @@ User.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-     },
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
