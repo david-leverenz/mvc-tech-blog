@@ -1,35 +1,35 @@
-const user = require('./user');
-const blog_data = require('./blog_data');
-const comments = require('./comments');
+const User = require('./User');
+const Blog_data = require('./Blog_data');
+const Comments = require('./Comments');
 
-user.hasMany(blog_data, {
+User.hasMany(Blog_data, {
   foreignKey: 'user_id'
 });
 
-blog_data.belongsTo(user, {
+Blog_data.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-blog_data.hasMany(comments, {
+Blog_data.hasMany(Comments, {
     foreignKey: 'blog_id',
     onDelete: 'CASCADE'
   });
   
-  comments.belongsTo(blog_data, {
+  Comments.belongsTo(Blog_data, {
     foreignKey: 'blog_id',
     onDelete: 'CASCADE'
   });
 
-  user.hasMany(comments, {
+  User.hasMany(Comments, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
   });
 
-  comments.belongsTo(user, {
+  Comments.belongsTo(User, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
   })
 
 // many to many relationships require a through table
 
-module.exports = { user, blog_data, comments };
+module.exports = { User, Blog_data, Comments };
