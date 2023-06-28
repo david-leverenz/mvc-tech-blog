@@ -54,6 +54,7 @@ router.post('/login', async (req, res) => {
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) { // this is the name of session you created above
     req.session.destroy(() => {
+      res.json({ message: 'Goodbye!' });
       res.status(204).end();
     });
   } else {
