@@ -1,4 +1,6 @@
-[
+const { Blog_data } = require('../models');
+
+const blogData = [
     {
         "post_title": "Awesome",
         "post_contents": "I think this blog site is awesome!",
@@ -14,4 +16,8 @@
         "post_contents": "I think this blog site is so-so!",
         "user_id": 3
     }
-]
+];
+
+const seedBlog = () => Blog_data.bulkCreate(blogData);
+
+module.exports = seedBlog;
