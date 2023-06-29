@@ -1,7 +1,19 @@
+const router = require('express').Router();
+const { User, Blog_data, Comments } = require('../../models');
 
-// const router = require('express').Router();
-// const { User, Blog_data, Comments } = require('../../models');
-
+//I want this to create a new post but couldn't pull the brain power to reason through it.
+router.post('/', async (req, res) => {
+    try {
+      const newBlog = await Blog_data.create({
+        ...req.body,
+        user_id: req.session.user_id, // user id is coming from the user session, user_id from the UserRoutes
+      });
+  
+      res.status(200).json(newBlog);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
 // router.get('/:id', async (req, res) => {
 //     // find one category by its `id` value
 //     // be sure to include its associated Products

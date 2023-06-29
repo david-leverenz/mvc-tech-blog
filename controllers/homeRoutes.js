@@ -27,11 +27,24 @@ router.get('/:id', async (req, res) => {
     }
 })
 
+// I want to create a comment but need to find the blog first, confused as to whether it is a put to update the Blog_post table or post to create a comment on the Comments table, the code below is completely incorrect
 router.post('/:id', async (req, res) => {
-    try{
-        const blogData = await Blog_data.findByPk(req.params.id);
+
+    try {
+      const commentData = await Comments.update(req.body, {
+        where: {
+          id: req.params.id,
+        },
+      });
+      if (!blogData[0]) {
+        res.status(404).json({ message: 'No blog with this id!' });
+        return;
+      }
+      res.status(200).json(blogData);
+    } catch (err) {
+      res.status(500).json(err);
     }
-})
+  });
 
 // router.get('/profile', auth, async (req, res) => {
 //     const userData = await User.findByPk(req.session.user_id, {
