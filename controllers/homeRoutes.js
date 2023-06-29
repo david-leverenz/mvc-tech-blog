@@ -19,9 +19,9 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const projectData = await Project.findByPk(req.params.id);
-        const oneProjectData = projectData.get({ plain: true });
-        res.render('oneproject', oneProjectData)
+        const blogData = await Blog_data.findByPk(req.params.id);
+        const oneBlogData = blogData.get({ plain: true });
+        res.render('oneBlog', oneBlogData)
     } catch (error) {
         res.status(500).json(error)
     }
