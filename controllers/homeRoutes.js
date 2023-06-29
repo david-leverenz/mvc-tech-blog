@@ -27,15 +27,21 @@ router.get('/:id', async (req, res) => {
     }
 })
 
-router.get('/profile', auth, async (req, res) => {
-    const userData = await User.findByPk(req.session.user_id, {
-        include: [{ model: Project }]
-    });
-    // console.log(userData);
-    let newUserData = userData.get({ plain: true })
-
-    res.render('profile', newUserData)
-
+router.post('/:id', async (req, res) => {
+    try{
+        const blogData = await Blog_data.findByPk(req.params.id);
+    }
 })
+
+// router.get('/profile', auth, async (req, res) => {
+//     const userData = await User.findByPk(req.session.user_id, {
+//         include: [{ model: Project }]
+//     });
+//     // console.log(userData);
+//     let newUserData = userData.get({ plain: true })
+
+//     res.render('profile', newUserData)
+
+// })
 
 module.exports = router;
