@@ -15,6 +15,16 @@ const commentsData = [
         "comment":"I think it is so-so too!",
         "blog_data_id": 3,
         "user_id": 2
+    },
+    {
+        "comment":"I think it is fine!",
+        "blog_data_id": 3,
+        "user_id": 1
+    },
+    {
+        "comment":"I'm not so sure about it.",
+        "blog_data_id": 3,
+        "user_id": 2
     }
 ];
 

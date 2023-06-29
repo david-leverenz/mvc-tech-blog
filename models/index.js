@@ -17,7 +17,6 @@ Blog_data.hasMany(Comments, {
   
   Comments.belongsTo(Blog_data, {
     foreignKey: 'blog_data_id',
-    onDelete: 'CASCADE'
   });
 
   User.hasMany(Comments, {
@@ -27,9 +26,6 @@ Blog_data.hasMany(Comments, {
 
   Comments.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'CASCADE'
   })
-
-// many to many relationships require a through table
 
 module.exports = { User, Blog_data, Comments };
