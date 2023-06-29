@@ -53,7 +53,7 @@ User.init(
     timestamps: false,
     freezeTableName: true, // otehrwise sequelize makes it plural, 
     underscored: true, // changes camel case to underscore
-    modelName: 'User',
+    modelName: 'user',
   }
 );
 

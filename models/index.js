@@ -11,12 +11,12 @@ Blog_data.belongsTo(User, {
 });
 
 Blog_data.hasMany(Comments, {
-    foreignKey: 'blog_id',
+    foreignKey: 'blog_data_id',
     onDelete: 'CASCADE'
   });
   
   Comments.belongsTo(Blog_data, {
-    foreignKey: 'blog_id',
+    foreignKey: 'blog_data_id',
     onDelete: 'CASCADE'
   });
 

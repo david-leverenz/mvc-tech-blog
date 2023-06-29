@@ -32,7 +32,7 @@ Blog_data.init(
     timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Blog_data',
+    modelName: 'blog_data',
   }
 );
 

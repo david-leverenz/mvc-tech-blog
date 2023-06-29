@@ -5,8 +5,7 @@ const auth = require('../utils/auth.js');
 router.get('/', async (req, res) => {
     try {
         const blogData = await Blog_data.findAll({
-            include: [{ model: User,
-                include: [{model: Comments }]}],
+            include: [{ model: User}],
         });
         console.log(blogData);
         const showBlogs = blogData.map(blog => blog.get({ plain: true }));
@@ -19,8 +18,12 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const blogData = await Blog_data.findByPk(req.params.id);
+        const blogData = await Blog_data.findByPk(req.params.id, {
+            include:[{model: User},{model: Comments, include: [User]}],
+            });
+   
         const oneBlogData = blogData.get({ plain: true });
+        console.log(oneBlogData);
         res.render('oneBlog', oneBlogData)
     } catch (error) {
         res.status(500).json(error)

@@ -1,0 +1,9 @@
+<h1>All Blogs</h1>
+<p>
+    {{#each showBlogs}}
+<h2>
+    {{this.post_title}}
+</h2>
+Created on: {{dateFormat this.createdAt "MM/DD/YYYY (h:mm a)"}} By user: {{this.User.name}}
+{{/each}}
+</p>
