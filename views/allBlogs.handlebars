@@ -2,11 +2,11 @@
 <p>
     {{#each showBlogs}}
 <p>
-<h1>{{this.post_title}}</h1>
+<h2>{{this.post_title}}</h2>
 <p>
     {{this.post_contents}}
 <p>
-    Created on:{{this.createdAt}} by: {{this.User.name}}
+    Created on: {{dateFormat this.createdAt "MM/DD/YYYY, h:mm:ss a"}} By user: {{this.User.name}}
 </p>
 <p>
     Comment:{{this.Comments.comment}}-{{this.Comments.user_id}}
