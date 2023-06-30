@@ -23,9 +23,9 @@ When you are idle on the site for more than a set time you are able to view post
 
 ## Links
 **GitHub:** https://github.com/david-leverenz/mvc-tech-blog<br>
-**Walkthrough Video:** N/A<br>
-**Live Link:** https://david-leverenz.github.io/mvc-tech-blog/<br>
+**Live Link:** [https://david-leverenz.github.io/mvc-tech-blog/](https://afternoon-plateau-91996-143dd3e291e8.herokuapp.com/)<br>
 **Screen Shot:** <br>
+![image](https://github.com/david-leverenz/mvc-tech-blog/assets/131185593/bae48ec2-afb3-4a62-83bc-99c2ddb29406)
 
 
 ## Getting Started
