@@ -23,9 +23,9 @@ When you are idle on the site for more than a set time you are able to view post
 
 ## Links
 **GitHub:** https://github.com/david-leverenz/mvc-tech-blog<br>
-**Walkthrough Video:** N/A<br>
-**Live Link:** https://david-leverenz.github.io/mvc-tech-blog/<br>
+**Live Link:** [https://david-leverenz.github.io/mvc-tech-blog/](https://afternoon-plateau-91996-143dd3e291e8.herokuapp.com/)<br>
 **Screen Shot:** <br>
+![image](https://github.com/david-leverenz/mvc-tech-blog/assets/131185593/bae48ec2-afb3-4a62-83bc-99c2ddb29406)
 
 
 ## Getting Started
@@ -43,5 +43,5 @@ Version 1.0 Initial Release
 ## License
 This project is licensed under the MIT license.
 ## Acknowledgments
-Special thanks to Springhill Suites, which is where I did most of the work for this homework.  The room was gross and noisy, the workkspace adequate and the carpet was so gross I had to put my shoes on to use the rest room.  I was able to get extra towels, though.  It's good to be alive.
+My instructor and TAs are saints, patiently working through each and every issue I encounter.  Without their support my family would lock me in a padded room.
 
