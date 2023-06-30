@@ -1,15 +1,12 @@
-<h1>All Blogs</h1>
+<article class="blog-post"></article>
 <p>
     {{#each showBlogs}}
     <a href="/{{this.id}}" class="link-warning text-decoration-none">
-<div>
-    <h2>
-        {{this.post_title}}
-    </h2></a>
-    <div class="fs-6">
-    Posted on {{dateFormat this.createdAt "MM/DD/YYYY (h:mm a)"}} by user{{this.User.name}}
-    </div>
+            <h2 class="blog-post-title">{{this.post_title}}</h2>
+    </a>
+<div class="fs-6">
+    <p class="blog-post-meta">Posted on {{dateFormat this.createdAt "MM/DD/YYYY (h:mm a)"}} by user{{this.User.name}}
+    </p>
 </div>
-
 {{/each}}
 </p>
