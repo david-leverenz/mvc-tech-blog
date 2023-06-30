@@ -43,5 +43,5 @@ Version 1.0 Initial Release
 ## License
 This project is licensed under the MIT license.
 ## Acknowledgments
-Special thanks to Springhill Suites, which is where I did most of the work for this homework.  The room was gross and noisy, the workkspace adequate and the carpet was so gross I had to put my shoes on to use the rest room.  I was able to get extra towels, though.  It's good to be alive.
+My instructor and TAs are saints, patiently working through each and every issue I encounter.  Without their support my family would lock me in a padded room.
 
