@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Blog_data, User, Comments } = require('../models');
 const auth = require('../utils/auth');
 
+// Not getting the user after I added the href tag?
 router.get('/', async (req, res) => {
   try {
     const blogData = await Blog_data.findAll({

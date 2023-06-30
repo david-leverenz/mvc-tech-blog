@@ -1,15 +1,12 @@
-<h1>One Blog</h1>
-
-<h2>{{post_title}}</h2>
-<p>
+<h1>Blog Title: {{post_title}}</h2>
+<p class="fs-5">
     {{post_contents}}
-<p>
+<p class="fs-8">
     Created on: {{dateFormat createdAt "MM/DD/YYYY (h:mm a)"}} By user: {{user.name}}
 </p>
     {{#each comments}}
-<p>
-    Comment:{{comment}} : {{this.user.name}}
-    {{!-- Comments don't display, need to learn how to include multiple models.  Also, need to grab username by its id, not sure how to do that --}}
+<p class="fs-5">
+    "{{comment}}" said user {{this.user.name}}
 </p>
 {{/each}}
 </p>
