@@ -6,7 +6,7 @@ const viewRoutes = require('./viewRoutes');
 
 router.use('/api', apiRoutes);
 router.use('/', homeRoute);
-router.use('/',viewRoutes);
+router.use('/', viewRoutes);
 
 
 module.exports = router;
