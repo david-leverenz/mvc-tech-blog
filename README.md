@@ -1,5 +1,30 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Attention Grader
+This project is not 100% complete.  It has a lot of working functionality but it is not all tied together.  The Heroku link will not work until I fix a few things.  I ran out of time.  Below is a list of functional and non-functional items to help in your assessment.
+### Functional
+1) Database models are correctly assembled and linked.
+2) Seed files and script are correctly created and functional.
+3) All backend routes are correctly written and functional.  They all work in Insomnia.  This includes:
+   a. Logout<br>
+   b. Login<br>
+   c. Sign Up<br>
+   d. Post Comment<br>
+   e. Delete Comment<br>
+   f. Post Blog<br>
+   g. Get All Blogs<br>
+   h. Get One Blog<br>
+   i. Delete Blog<br>
+4) Server.js and connection.js are properly written.
+5) Handlebars files are setup up and functional.
+
+### In Progress
+1. Essentially, I am missing the javascript to tie everything together.
+2. I am struggling with getting things tied to my routes, like login.  I may have to wait until my next tutoring session.
+3. User Profile route doesn't work for some reason.  I need to look into this further.
+4. Heroku link does not work.
+
+
 # MVC Tech Blog
 This is a CMS-style blog site.<br>
 ## Description
