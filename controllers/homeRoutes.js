@@ -1,3 +1,4 @@
+// These are the basic get routes to get all blogs and then get one blog by id with its related poster and all comments.
 const router = require('express').Router();
 const { Blog_data, User, Comments } = require('../models');
 const auth = require('../utils/auth');

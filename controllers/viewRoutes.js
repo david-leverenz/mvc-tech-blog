@@ -1,4 +1,6 @@
 const router = require('express').Router();
+// These routes are under construction.  Eventually these will be the routes that serve the various elements on the pages.
+
 // const { User, Messages, Room} = require('../models');
 // const auth = require('./utils/auth')
 

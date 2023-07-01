@@ -1,15 +1,11 @@
+// These routes allow you to create and delete a comment.
 const router = require('express').Router();
 const { Comments } = require('../../models');
 
 router.post('/', async (req, res) => {
 
     try {
-      const commentData = await Comments.create(req.body); //blog id and user id from the req.session.user_id
-
-
-    //   const newBlog = await Blog_data.create({
-    //     ...req.body,
-    //     user_id: req.session.user_id,
+      const commentData = await Comments.create(req.body);
 
       res.status(200).json(commentData);
     } catch (err) {
@@ -36,8 +32,11 @@ router.delete('/:id', async (req, res) => {
     }
   });
 
-
-
+// Random notes from my tutor that I didn't want to lose until I finished the entire project.
+    //blog id and user id from the req.session.user_id
+    //   const newBlog = await Blog_data.create({
+    //     ...req.body,
+    //     user_id: req.session.user_id,
 
 //hidden form that has the blog_id as the value of the inputs and gets passed to the back end.
 

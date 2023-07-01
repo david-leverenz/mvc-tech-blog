@@ -1,3 +1,4 @@
+// Contains all comments.  Foreign keys are the blog id and the user id.
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 

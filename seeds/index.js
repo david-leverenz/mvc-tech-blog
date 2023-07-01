@@ -1,3 +1,4 @@
+// All seeds work properly.
 const seedUsers = require('./userData');
 const seedBlog = require('./blogData');
 const seedComments = require('./commentData');

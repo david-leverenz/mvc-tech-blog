@@ -1,3 +1,4 @@
+// This file sets up the entire project.  It sets up the user session details.  Requires sequelize.  Will use the proper port for Heroku if it's there, otherwise port 3001.  It requires the express middleware, handlebars, handlebars helper file, routes.  It also puts a listener on the port.
 const express = require('express');
 const session = require('express-session');
 const exhbs = require('express-handlebars');

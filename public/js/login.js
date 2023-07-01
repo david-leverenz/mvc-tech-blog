@@ -1,3 +1,4 @@
+// I am currently trying to get this code working.
 const loginFormHandler = async (event) => {
     event.preventDefault();
     console.log(event);

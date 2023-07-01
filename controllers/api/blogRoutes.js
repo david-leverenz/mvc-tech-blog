@@ -1,3 +1,4 @@
+// These routes allow you to post and delete a blog.
 const router = require('express').Router();
 const { Blog_data } = require('../../models');
 

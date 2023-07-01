@@ -1,3 +1,4 @@
+// Contains blog information.  Foreign key is is from User table.
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
