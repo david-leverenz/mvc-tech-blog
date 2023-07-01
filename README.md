@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Attention Grader
-This project is not 100% complete.  It has a lot of working functionality but it is not all tied together.  The Heroku link will not work until I fix a few things.  I ran out of time because of work on Project Two.  Below is a list of functional and non-functional items to help in your assessment.  Please have mercy on me :).  I really tried and will continue to work on this.<br>
+This project is not 100% complete.  It has a lot of working functionality but it is not all tied together.  The Heroku link will not work until I fix a few things.  I ran out of time because I was working on Project Two.  Below is a list of functional and non-functional items to help in your assessment.  Please have mercy on me :).  I really tried and will continue to work on this.<br>
 ### Functional
 1) Database models are correctly assembled and linked.
 2) Seed files and script are correctly created and functional.
@@ -16,14 +16,16 @@ This project is not 100% complete.  It has a lot of working functionality but it
    h. Get One Blog<br>
    i. Delete Blog<br>
 4) Server.js and connection.js are properly written.
-5) Handlebars files are setup up and functional.
+5) All blogs and single blog display properly in Insomnia.
+6) Handlebars files are setup up and have a professional, modern, polished look.
+7) Main page looks good and has a login button and dashboard link.
 
 ### In Progress
 1. Essentially, I am missing the javascript to tie everything together.
 2. I am struggling with getting things tied to my routes, like login.  I may have to wait until my next tutoring session.
-3. User Profile route doesn't work for some reason.  I need to look into this further.
-4. Heroku link does not work.
-
+3. While I have good looking Handlebars files (change extension to .html to view them), I am having trouble getting them called from routes.
+4. User Profile route doesn't work for some reason.  It won't work in Insomnia and everything looks correct.  I'll need professional help to get this figured out.
+5. Heroku link does not work and I'll need my instructor's help to figure it out.
 
 # MVC Tech Blog
 This is a CMS-style blog site.<br>
@@ -50,7 +52,8 @@ When you are idle on the site for more than a set time you are able to view post
 **GitHub:** https://github.com/david-leverenz/mvc-tech-blog<br>
 **Live Link:** https://afternoon-plateau-91996-143dd3e291e8.herokuapp.com/<br>
 **Screen Shot:** <br>
-![image](https://github.com/david-leverenz/mvc-tech-blog/assets/131185593/bae48ec2-afb3-4a62-83bc-99c2ddb29406)
+![image](https://github.com/david-leverenz/mvc-tech-blog/assets/131185593/ad1dc275-3eec-42c4-b0fe-eb79070f10c2)
+
 
 
 ## Getting Started
