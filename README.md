@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Attention Grader
-This project is not 100% complete.  It has a lot of working functionality but it is not all tied together.  The Heroku link will not work until I fix a few things.  I ran out of time.  Below is a list of functional and non-functional items to help in your assessment.
+This project is not 100% complete.  It has a lot of working functionality but it is not all tied together.  The Heroku link will not work until I fix a few things.  I ran out of time because of work on Project Two.  Below is a list of functional and non-functional items to help in your assessment.  Please have mercy on me :).  I really tried and will continue to work on this.<br>
 ### Functional
 1) Database models are correctly assembled and linked.
 2) Seed files and script are correctly created and functional.
@@ -48,7 +48,7 @@ When you are idle on the site for more than a set time you are able to view post
 
 ## Links
 **GitHub:** https://github.com/david-leverenz/mvc-tech-blog<br>
-**Live Link:** [https://david-leverenz.github.io/mvc-tech-blog/](https://afternoon-plateau-91996-143dd3e291e8.herokuapp.com/)<br>
+**Live Link:** https://afternoon-plateau-91996-143dd3e291e8.herokuapp.com/<br>
 **Screen Shot:** <br>
 ![image](https://github.com/david-leverenz/mvc-tech-blog/assets/131185593/bae48ec2-afb3-4a62-83bc-99c2ddb29406)
 
