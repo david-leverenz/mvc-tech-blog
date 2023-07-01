@@ -1,13 +1,36 @@
-{{!-- Display one blog and all comments.  This works! --}}
-<h1>Blog Title: {{post_title}}</h2>
-<p class="fs-5">
-    {{post_contents}}
-<p class="fs-8">
-    Created on: {{dateFormat createdAt "MM/DD/YYYY (h:mm a)"}} By user: {{user.name}}
-</p>
+{{!-- Display one blog and all comments. This works! --}}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>MVC Technology Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+
+</head>
+<div class="p-4">
+    <div class="p-2 p-md-2 mb-4 text-warning rounded bg-secondary">
+        <div class="col-md-6 px-0">
+            <h3 class="display-6 fst-italic text-warning">{{post_title}}</h3>
+        </div>
+    </div>
+
+    <p class="fs-5">
+        {{post_contents}}
+    <p class="fs-8">
+        Created on: {{dateFormat createdAt "MM/DD/YYYY (h:mm a)"}} By user: {{user.name}}
+    </p>
     {{#each comments}}
-<p class="fs-5">
-    "{{comment}}" said user {{this.user.name}}
-</p>
-{{/each}}
-</p>
+    <p class="fs-5">
+        "{{comment}}" said user {{this.user.name}}
+    </p>
+    {{/each}}
+    </p>
+</div>
