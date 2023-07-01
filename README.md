@@ -5,7 +5,7 @@ This project is not 100% complete.  It has a lot of working functionality but it
 ### Functional
 1) Database models are correctly assembled and linked.
 2) Seed files and script are correctly created and functional.
-3) All backend routes are correctly written and functional.  They all work in Insomnia.  This includes:
+3) All backend routes are correctly written and functional.  They all work in Insomnia.  This includes:<br>
    a. Logout<br>
    b. Login<br>
    c. Sign Up<br>
