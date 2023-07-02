@@ -17,8 +17,16 @@ This project is not 100% complete.  It has a lot of working functionality but it
    i. Delete Blog<br>
 4) Server.js and connection.js are properly written.
 5) All blogs and single blog display properly in Insomnia.
-6) Handlebars files are setup up and have a professional, modern, polished look.
-7) Main page looks good and has a login button and dashboard link.
+6) Handlebars files are setup up and have a professional, modern, polished look.  These files look good (You need to add the .html extension to them to see them as I designed them.):<br>
+   a. main.handlebars<br>
+   b. addBlog.handlebars<br>
+   c. allBlogs.handlebars<br>
+   d. login.handlebars<br>
+   e. oneBlog.handlebars<br>
+   f. signup.handlebars<br>
+   g. userProfile.handlebars<br>
+   
+9) Main page looks good and has a login button and dashboard link.
 
 ### In Progress
 1. Essentially, I am missing the javascript to tie everything together.
