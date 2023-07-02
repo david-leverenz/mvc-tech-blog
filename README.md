@@ -29,7 +29,7 @@ This project is not 100% complete.  It has a lot of working functionality but it
 9) Main page looks good and has a login button and dashboard link.
 
 ### In Progress
-I am super frustrated because I think I am really close to nailing this assignment.  I just need a little help.
+I am super frustrated because I think I am really close to nailing this assignment.  I just need a little help getting it put together.  And I don't think anyone will be available to help me this weekend.
 1. Essentially, I am missing the javascript to tie everything together.
 2. I am struggling with getting things tied to my routes, like login.  I may have to wait until my next tutoring session.
 3. While I have good looking Handlebars files (change extension to .html to view them), I am having trouble getting them called from routes.
