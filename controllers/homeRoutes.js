@@ -4,19 +4,7 @@ const { Blog_data, User, Comments } = require('../models');
 const auth = require('../utils/auth');
 
 // Not getting the user after I added the href tag?
-router.get('/', async (req, res) => {
-  try {
-    const blogData = await Blog_data.findAll({
-      include: [{ model: User }],
-    });
-    console.log(blogData);
-    const showBlogs = blogData.map(blog => blog.get({ plain: true }));
 
-    res.render('allBlogs', { showBlogs })
-  } catch (error) {
-    res.status(500).json(error)
-  }
-})
 
 router.get('/:id', async (req, res) => {
   try {

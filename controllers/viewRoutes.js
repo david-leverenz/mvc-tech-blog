@@ -1,18 +1,33 @@
 const router = require('express').Router();
 // These routes are under construction.  Eventually these will be the routes that serve the various elements on the pages.
+const { Blog_data, User, Comments } = require('../models');
+router.get('/', async (req, res) => {
+  try {
+    const blogData = await Blog_data.findAll({
+      include: [{ model: User }],
+    });
+    console.log(req.session);
+    const showBlogs = blogData.map(blog => blog.get({ plain: true }));
 
+    res.render('allBlogs', { showBlogs, logged_in: req.session.logged_in })
+  } catch (error) {
+    res.status(500).json(error)
+  }
+})
 // I cannot get this working in Insomnia.  I have no idea why and it's not like I haven't been staring at this for an hour.
 router.get('/login', (req, res) => {
+  console.log("Inside Login Route");
     // If the user is already logged in, redirect the request to another route
-    if (req.session.logged_in) {
+    if (req.session?.logged_in) {
       res.redirect('/');
       return;
     }
   
-    res.render('login');
+    res.render('login', );
   });
 
 router.get('/signup', async (req,res) => {
+  console.log("Inside Signup Route");
     try {
         res.render('signup');
     } catch (error) {
