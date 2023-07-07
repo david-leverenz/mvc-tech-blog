@@ -4,9 +4,9 @@ const apiRoutes = require('./api');
 const homeRoute = require('./homeRoutes')
 const viewRoutes = require('./viewRoutes');
 
-router.use('/api', apiRoutes);
-router.use('/dashboard', homeRoute);
 router.use('/', viewRoutes);
+router.use('/dashboard', homeRoute);
 
+router.use('/api', apiRoutes);
 
 module.exports = router;
