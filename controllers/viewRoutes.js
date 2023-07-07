@@ -6,9 +6,9 @@ router.get('/', async (req, res) => {
     const blogData = await Blog_data.findAll({
       include: [{ model: User }],
     });
-    console.log(req.session);
+    // console.log(req.session);
     const showBlogs = blogData.map(blog => blog.get({ plain: true }));
-
+    console.log(showBlogs);
     res.render('allBlogs', { showBlogs, logged_in: req.session.logged_in })
   } catch (error) {
     res.status(500).json(error)

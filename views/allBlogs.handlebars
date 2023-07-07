@@ -23,11 +23,11 @@
     {{#each showBlogs}}
     <div class="p-2 p-md-2 mb-4 text-warning rounded bg-secondary">
         <div class="col-md-6 px-0">
-                 <a href="/dashboard/{{this.id}}" class="link-warning text-decoration-none">
+                 <a href="/dashboard/post/{{this.id}}" class="link-warning text-decoration-none">
             <h2 class="blog-post-title">{{this.post_title}}</h2></a>
             {{!-- <h3 class="display-6 fst-italic text-warning">{{this.post_title}}</h3> --}}
             <div class="fs-6">
-                <p class="blog-post-meta text-warning">Posted on {{dateFormat this.createdAt "MM/DD/YYYY (h:mm a)"}} by user{{this.User.name}}
+                <p class="blog-post-meta text-warning">Posted on {{dateFormat this.createdAt "MM/DD/YYYY (h:mm a)"}} by user {{this.user.name}}
                 </p>
             </div>
         </div>

@@ -3,15 +3,20 @@ const router = require('express').Router();
 const { Blog_data, User, Comments } = require('../models');
 const auth = require('../utils/auth');
 
-router.get('/dashboard/:id', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
     const blogData = await Blog_data.findByPk(req.params.id, {
       include: [{ model: User }, { model: Comments, include: [User] }],
     });
 
-    const oneBlogData = blogData.get({ plain: true });
+    if (blogData) {
+      const oneBlogData = blogData.get({ plain: true });
 
-    res.render('oneBlog', oneBlogData)
+      res.render('oneBlog', oneBlogData)
+    } else {
+      res.status(404).end();
+    }
+
   } catch (error) {
     res.status(500).json(error)
   }
