@@ -1,6 +1,6 @@
 const router = require('express').Router();
-// These routes are under construction.  Eventually these will be the routes that serve the various elements on the pages.
 const { Blog_data, User, Comments } = require('../models');
+
 router.get('/', async (req, res) => {
   try {
     const blogData = await Blog_data.findAll({
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(error)
   }
 })
-// I cannot get this working in Insomnia.  I have no idea why and it's not like I haven't been staring at this for an hour.
+
 router.get('/login', (req, res) => {
   console.log("Inside Login Route");
     // If the user is already logged in, redirect the request to another route
