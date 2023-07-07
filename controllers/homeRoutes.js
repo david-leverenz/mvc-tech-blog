@@ -22,7 +22,7 @@ router.get('/post/:id', async (req, res) => {
   }
 })
 
-// This isn't working and I don't know why
+
 router.get('/profile', auth, async (req, res) => {
   console.log("Made it");
   try {
