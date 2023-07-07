@@ -1,7 +1,7 @@
 // Relationships are defined in this file.  No "through" relationships were necessary for this project (thankfully!).
 const User = require('./user');
 const Blog_data = require('./blog_data');
-const Comments = require('./Comments');
+const Comments = require('./Comments')
 
 User.hasMany(Blog_data, {
   foreignKey: 'user_id'
