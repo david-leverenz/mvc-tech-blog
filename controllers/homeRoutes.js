@@ -23,27 +23,27 @@ router.get('/post/:id', async (req, res) => {
 })
 
 
-router.get('/profile', auth, async (req, res) => {
-  console.log("Made it");
-  try {
-    const userData = await Blog_data.findAll({
-      where: {
-        user_id: req.session.user_id
-      }
-    });
+// router.get('/profile', auth, async (req, res) => {
+//   console.log("Made it");
+//   try {
+//     const userData = await Blog_data.findAll({
+//       where: {
+//         user_id: req.session.user_id
+//       }
+//     });
     
-    const blogData = userData.map((blog) => blog.get({ plain: true}));
-    console.log(newUserData);
+//     const blogData = userData.map((blog) => blog.get({ plain: true}));
+//     console.log(newUserData);
 
-    res.render('userProfile', {
-      //optionally add a 
-      //layout: 'profile'
-      blogData
-    });
-  } catch (error) {
-    res.status(500).json(error)
-  }
+//     res.render('userProfile', {
+//       //optionally add a 
+//       //layout: 'profile'
+//       blogData
+//     });
+//   } catch (error) {
+//     res.status(500).json(error)
+//   }
 
-})
+// })
 
 module.exports = router;

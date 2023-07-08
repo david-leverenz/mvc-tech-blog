@@ -20,7 +20,6 @@
       <div class="col-12">
         <div class="card bg-secondary text-warning" style="border-radius: 1rem;">
           <div class="card-body text-center">
-
             <div>
               <h1 class="logo">Create New Post</h1>
               <p class="text-white-50 mb-5">Please enter your post information.</p>
@@ -33,13 +32,26 @@
                 <label class="form-label" for="post-text">Post Text</label>
               </div>
               <button id="postBtn" class="postBtn btn btn-outline-warning btn-lg px-5" type="submit">Post it!</button>
-
-
             </div>
           </div>
         </div>
+        {{#if blogs.length}}
+        <section>
+          <h2>Your Previous Posts</h2>
+          <ol>
+            {{#each blogs as |blog|}}
+            <li>
+              {{> post-info blog}}
+              <!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> -->
+            </li>
+            {{/each}}
+          </ol>
+        </section>
+        {{/if}}
+      
       </div>
     </div>
   </div>
+  
   <script src="./js/newPost.js"></script>
 </section>

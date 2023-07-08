@@ -20,7 +20,7 @@
     <div class="p-2 p-md-2 mb-4 text-warning rounded bg-secondary">
         <div class="px-0">
                  <a href="/dashboard/post/{{this.id}}" class="link-warning text-decoration-none">
-            <h2 class="blog-post-title">{{this.post_title}}</h2></a>
+            <div class="blog-post-title h2">{{this.post_title}}</div></a>
             <div class="fs-6">
                 <p class="blog-post-meta text-warning">Posted on {{dateFormat this.createdAt "MM/DD/YYYY (h:mm a)"}} by user {{this.user.name}}
                 </p>

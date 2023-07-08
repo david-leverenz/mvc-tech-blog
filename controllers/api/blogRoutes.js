@@ -15,24 +15,24 @@ router.post('/', async (req, res) => {
     }
   });
 
-  router.delete('/:id', async (req, res) => {
-    try {
-      const oneBlog = await Blog_data.destroy({
-        where: {
-          id: req.params.id
-          },
-      });
+  // router.delete('/:id', async (req, res) => {
+  //   try {
+  //     const oneBlog = await Blog_data.destroy({
+  //       where: {
+  //         id: req.params.id
+  //         },
+  //     });
   
-      if (!oneBlog) {
-        res.status(404).json({ message: 'No blog found with this id!' });
-        return;
-      }
+  //     if (!oneBlog) {
+  //       res.status(404).json({ message: 'No blog found with this id!' });
+  //       return;
+  //     }
   
-      res.status(200).json(`blog with id of ${req.params.id} deleted`);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+  //     res.status(200).json(`blog with id of ${req.params.id} deleted`);
+  //   } catch (err) {
+  //     res.status(500).json(err);
+  //   }
+  // });
 
 // /* <a href="/{{blog_id}}"> */</a>
 

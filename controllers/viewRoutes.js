@@ -1,22 +1,24 @@
 const router = require('express').Router();
+const sequelize = require('../config/connection');
 const { Blog_data, User, Comments } = require('../models');
+const auth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
     const blogData = await Blog_data.findAll({
       include: [{ model: User }],
     });
-    // console.log(req.session);
+    
     const showBlogs = blogData.map(blog => blog.get({ plain: true }));
-    console.log(showBlogs);
+    
     res.render('allBlogs', { showBlogs, logged_in: req.session.logged_in })
   } catch (error) {
     res.status(500).json(error)
   }
 })
 
-router.get('/login', (req, res) => {
-  console.log("Inside Login Route");
+router.get('/login', async (req, res) => {
+
     // If the user is already logged in, redirect the request to another route
     if (req.session?.logged_in) {
       res.redirect('/');
@@ -27,7 +29,7 @@ router.get('/login', (req, res) => {
   });
 
 router.get('/signup', async (req,res) => {
-  console.log("Inside Signup Route");
+
     try {
         res.render('signup');
     } catch (error) {
@@ -35,41 +37,43 @@ router.get('/signup', async (req,res) => {
     }
 })
 
-// router.get('/profile', async (req, res) => {
-//     try {
+router.get('/dash', auth, async (req, res) => {
+console.log("Inside dash route")
+  Blog_data.findAll({
+    where: {
 
-//         res.render('profile');
-//     } catch (error) {
-//         res.status(500).json(error)
-//     };
-// });
+      user_id: req.session.user_id
+    },
+    attributes: [
+      'id',
+      'post_title',
+      'post_contents',
+      'createdAt',
+    ],
+    include: [
+      {
+        model: Comments,
+        attributes: ['id', 'comment', 'blog_data_id', 'user_id', 'createdAt'],
+        include: {
+          model: User,
+          attributes: ['name']
+        }
+      },
+      {
+        model: User,
+        attributes: ['name']
+      }
+    ]
+  })
+    .then(dbBlogData => {
 
-
+      const blogs = dbBlogData.map(blog => blog.get({ plain: true }));
+      res.render('dashboard', { blogs, loggedIn: true });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 module.exports = router;
-
-// const { User, Messages, Room} = require('../models');
-// const auth = require('./utils/auth')
-
-// router.get('/', async (req, res) => {
-//     try {
-//         const roomData = await Room.findAll({
-//             include: [{
-//                 model: User,
-//                 through: Messages,
-//             }]
-//         });
-//         const newRoomData = roomData.map(room => room.get ({ plain:true }));
-//         console.log(newRoomData);
-//         res.render('chat', {newRoomData});
-//     } catch (error) {
-//         res.status(500).json(error)
-//     };
-// });
-// router.get('/',(req,res)=>{
-//     res.redirect('/chat')
-// })
-// router.get('/chat', (req, res) => {
-//     res.render('chat')
-// })
-// // com
