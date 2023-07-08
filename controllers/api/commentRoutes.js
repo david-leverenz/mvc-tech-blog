@@ -1,8 +1,9 @@
 // These routes allow you to create and delete a comment.
 const router = require('express').Router();
 const { Comments } = require('../../models/');
+const withAuth = require('../../utils/auth');
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
 
     try {
       const commentData = await Comments.create(req.body);
