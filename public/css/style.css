@@ -1,6 +1,6 @@
 /* Standard css file with formatting code */
 
-header, .project:not(:last-child) {
+header {
   border-bottom: 1px solid #ccc;
 }
 
