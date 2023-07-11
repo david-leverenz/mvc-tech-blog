@@ -35,19 +35,21 @@
             </div>
           </div>
         </div>
-        {{#if blogs.length}}
+
         <section>
           <h2>Your Previous Posts</h2>
           <ol>
-            {{#each blogs as |blog|}}
+            {{#each blogs}}
             <li>
-              {{> post-info blog}}
+                          <div class="blog-post-title h2">{{this.post_title}}</div></a>
+            <div class="fs-6">
+                <p class="blog-post-meta text-warning">Posted on {{dateFormat this.createdAt "MM/DD/YYYY (h:mm a)"}}{{!-- {{>  blog}} --}}
               <!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> -->
             </li>
             {{/each}}
           </ol>
         </section>
-        {{/if}}
+        {{!-- {{/if}} --}}
       
       </div>
     </div>

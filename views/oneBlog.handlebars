@@ -18,18 +18,18 @@
 <div class="p-4">
     <div class="p-2 p-md-2 mb-4 text-warning rounded bg-secondary">
         <div class="col-md-6 px-0">
-            <h3 class="display-6 fst-italic text-warning">{{post_title}}</h3>
+            <h3 class="display-6 fst-italic text-warning">{{oneBlogData.post_title}}</h3>
         </div>
     </div>
 
     <p class="fs-5">
-        {{post_contents}}
+        {{oneBlogData.post_contents}}
     <p class="fs-8">
-        Created on: {{dateFormat createdAt "MM/DD/YYYY (h:mm a)"}} By user: {{user.name}}
+        Created on: {{dateFormat oneBlogData.createdAt "MM/DD/YYYY (h:mm a)"}} By user: {{oneBlogData.user.name}}
     </p>
-    {{#each comments}}
+    {{#each oneBlogData.comments}}
     <p class="fs-5">
-        "{{comment}}" said user {{this.user.name}}
+        "{{this.comment}}" said user {{this.user.name}}
     </p>
     {{/each}}
     </p>
