@@ -21,7 +21,7 @@
         <div class="card bg-secondary text-warning" style="border-radius: 1rem;">
           <div class="card-body text-center">
             <div>
-              <h1 class="logo">Create New Post</h1>
+              <p class="h2 text-warning">Create New Post</p>
               <p class="text-white-50 mb-5">Please enter your post information.</p>
               <div class="form-outline form-white mb-4">
                 <input type="text" id="post-title" class="form-control form-control-lg " />
@@ -37,20 +37,16 @@
         </div>
 
         <section>
-          <h2>Your Previous Posts</h2>
-          <ol>
+          <p class="h2 text warning">Your Previous Posts</p>
+          {{!-- <ol> --}}
             {{#each blogs}}
-            <li>
-                          <div class="blog-post-title h2">{{this.post_title}}</div></a>
+                <a href="/dashboard/post/{{this.id}}" class=" h3 blog-post-title fs-4 text-decoration-none">{{this.post_title}}</a>
             <div class="fs-6">
-                <p class="blog-post-meta text-warning">Posted on {{dateFormat this.createdAt "MM/DD/YYYY (h:mm a)"}}{{!-- {{>  blog}} --}}
-              <!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> -->
-            </li>
+                <p class="blog-post-meta text-warning">Posted on {{dateFormat this.createdAt "MM/DD/YYYY (h:mm a)"}}
+            </div>
             {{/each}}
-          </ol>
+          {{!-- </ol> --}}
         </section>
-        {{!-- {{/if}} --}}
-      
       </div>
     </div>
   </div>
