@@ -1,3 +1,4 @@
+// User seeds.
 const { User } = require('../models');
 
 const userData = [

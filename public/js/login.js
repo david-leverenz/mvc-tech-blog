@@ -1,4 +1,4 @@
-// 
+// This hooks to the backend post route to login a user.
 const loginFormHandler = async (event) => {
     event.preventDefault();
     console.log(event);

@@ -1,4 +1,4 @@
-// These routes allow you to post and delete a blog.
+// These routes allow you to post and delete a blog.  Post route works through the front end.  I haven't created the functionality to delete a blog through the front end, but the delete route works in Insomnia.
 const router = require('express').Router();
 const { Blog_data } = require('../../models');
 
@@ -15,25 +15,23 @@ router.post('/', async (req, res) => {
     }
   });
 
-  // router.delete('/:id', async (req, res) => {
-  //   try {
-  //     const oneBlog = await Blog_data.destroy({
-  //       where: {
-  //         id: req.params.id
-  //         },
-  //     });
+  router.delete('/:id', async (req, res) => {
+    try {
+      const oneBlog = await Blog_data.destroy({
+        where: {
+          id: req.params.id
+          },
+      });
   
-  //     if (!oneBlog) {
-  //       res.status(404).json({ message: 'No blog found with this id!' });
-  //       return;
-  //     }
+      if (!oneBlog) {
+        res.status(404).json({ message: 'No blog found with this id!' });
+        return;
+      }
   
-  //     res.status(200).json(`blog with id of ${req.params.id} deleted`);
-  //   } catch (err) {
-  //     res.status(500).json(err);
-  //   }
-  // });
-
-// /* <a href="/{{blog_id}}"> */</a>
+      res.status(200).json(`blog with id of ${req.params.id} deleted`);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 module.exports = router;

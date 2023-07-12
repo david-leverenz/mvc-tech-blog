@@ -1,3 +1,4 @@
+// Some basic blog data to seed the database.  I didn't have to run this too many times.
 const { Blog_data } = require('../models');
 
 const blogData = [

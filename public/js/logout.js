@@ -1,4 +1,4 @@
-// 
+// This logs a user out.  It is called when the logout button is clicked.  It's tied to the userRoutes.js route.
 const logout = async ()=> {
 
     const response = await fetch("/api/users/logout",{

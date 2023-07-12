@@ -1,3 +1,4 @@
+// Connection file using Sequelize and dot.env to mask the credentials.
 const Sequelize = require('sequelize');
 require('dotenv').config();
 

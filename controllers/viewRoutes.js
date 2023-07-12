@@ -1,6 +1,6 @@
+// These are the basic routes to "view" the all blogs, sign up and login pages.
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-const { Blog_data, User, Comments } = require('../models');
+const { Blog_data, User } = require('../models');
 
 router.get('/', async (req, res) => {
   try {

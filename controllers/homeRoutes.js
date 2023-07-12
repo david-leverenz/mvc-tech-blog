@@ -1,4 +1,4 @@
-// get one blog by id with its related poster and all comments.
+// This route gets one blog by id with its related poster and all comments.  It also renders the dahsboard page where a user can create a new blog.
 const router = require('express').Router();
 const { Blog_data, User, Comments } = require('../models');
 const auth = require('../utils/auth');
@@ -23,7 +23,7 @@ router.get('/post/:id', auth, async (req, res) => {
 })
 
 router.get('/', auth, async (req, res) => {
-  console.log("Inside dash route")
+
     Blog_data.findAll({
       where: {
   

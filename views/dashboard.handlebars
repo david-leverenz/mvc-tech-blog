@@ -1,3 +1,4 @@
+{{!-- This is the dashboard page that allows the user to enter a new blog and see all of their previous posts. --}}
 <section class="vh-100 ">
   <div class="container py-5">
     <div class="row d-flex justify-content-center align-items-center">
@@ -21,15 +22,13 @@
         </div>
 
         <section>
-          <p class="h2 text warning">Your Previous Posts</p>
-          {{!-- <ol> --}}
+          <p class="h2 text-warning">Your Previous Posts</p>
             {{#each blogs}}
                 <a href="/dashboard/post/{{this.id}}" class=" h3 blog-post-title fs-4 text-decoration-none">{{this.post_title}}</a>
             <div class="fs-6">
                 <p class="blog-post-meta text-warning">Posted on {{dateFormat this.createdAt "MM/DD/YYYY (h:mm a)"}}
             </div>
             {{/each}}
-          {{!-- </ol> --}}
         </section>
       </div>
     </div>

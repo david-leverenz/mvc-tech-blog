@@ -1,3 +1,4 @@
+// This calls the signup route in the userRoutes.js file.
 const signupFormHandler = async (event) => {
     event.preventDefault();
     console.log(event);

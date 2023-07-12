@@ -1,3 +1,4 @@
+// This calls the blogRoutes.js to create a new blog.
 const postFormHandler = async (event) => {
     event.preventDefault();
     // console.log(event);
